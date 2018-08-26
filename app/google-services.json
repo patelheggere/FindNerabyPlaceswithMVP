@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "409608451728",
+    "firebase_url": "https://committe-election.firebaseio.com",
+    "project_id": "committe-election",
+    "storage_bucket": "committe-election.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409608451728:android:a9e0f31eedb12c1a",
+        "android_client_info": {
+          "package_name": "com.patelheggere.committeelection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409608451728-l353tcivflbv56d8rsmqmuoh4hj1td37.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClfUpKYP7pGO514jV90-fYx_lAnaDq_hY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409608451728:android:7cacd0afc1de07e7",
+        "android_client_info": {
+          "package_name": "com.patelheggere.goldfarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409608451728-l353tcivflbv56d8rsmqmuoh4hj1td37.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClfUpKYP7pGO514jV90-fYx_lAnaDq_hY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
