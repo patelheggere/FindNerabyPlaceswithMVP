@@ -85,6 +85,7 @@ public class SecondMainActivity extends BaseActivity implements GoogleApiClient.
     private Button mButtonFind;
     private Presenter mPresenter;
     private int selected;
+    private Animation animationBounce;
 
     @Override
     protected int getContentView() {
@@ -102,6 +103,8 @@ public class SecondMainActivity extends BaseActivity implements GoogleApiClient.
 
         rootLayout = findViewById(R.id.root_view);
 
+        animationBounce = AnimationUtils.loadAnimation(context, R.anim.btn_bounce);
+
         BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
                 = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -112,14 +115,17 @@ public class SecondMainActivity extends BaseActivity implements GoogleApiClient.
                     case R.id.navigation_rest:
                         selected = 1;
                         mButtonFind.setText(getString(R.string.find_rest));
+                        mButtonFind.startAnimation(animationBounce);
                         return true;
                     case R.id.navigation_hotel:
                         selected = 2;
                         mButtonFind.setText(getString(R.string.find_hotel));
+                        mButtonFind.startAnimation(animationBounce);
                         return true;
                     case R.id.navigation_hospital:
                         selected = 3;
                         mButtonFind.setText(getString(R.string.find_hospital));
+                        mButtonFind.startAnimation(animationBounce);
                         return true;
                 }
                 return false;
@@ -134,6 +140,7 @@ public class SecondMainActivity extends BaseActivity implements GoogleApiClient.
 
     @Override
     protected void initData() {
+
         mPresenter = new Presenter(this);
         if(isLocationAccessPermitted())
         {
