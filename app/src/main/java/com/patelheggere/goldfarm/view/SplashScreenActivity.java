@@ -29,12 +29,22 @@ public class SplashScreenActivity extends BaseActivity {
         l1 = (LinearLayout) findViewById(R.id.l1);
         l2 = (LinearLayout) findViewById(R.id.l2);
         mTextViewTitle = findViewById(R.id.tv_title);
+
+    }
+
+    @Override
+    protected void initData() {
         bounce = AnimationUtils.loadAnimation(context, R.anim.bounce);
         uptodown = AnimationUtils.loadAnimation(context,R.anim.topdown);
         downtoup = AnimationUtils.loadAnimation(context,R.anim.bottomtop);
         l1.setAnimation(uptodown);
         l2.setAnimation(downtoup);
         mTextViewTitle.startAnimation(bounce);
+    }
+
+    @Override
+    protected void initListener() {
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -42,16 +52,6 @@ public class SplashScreenActivity extends BaseActivity {
                 overridePendingTransition(R.anim.slide_in_left, R.anim.slide_in_right);
                 finish();
             }
-        },1000);
-    }
-
-    @Override
-    protected void initData() {
-
-    }
-
-    @Override
-    protected void initListener() {
-
+        },2000);
     }
 }
