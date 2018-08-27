@@ -49,6 +49,11 @@ public class Presenter {
                     view.hideProgressBar();
                     return;
                 }
+                else if (response.body().getStatus().equalsIgnoreCase("ZERO_RESULTS")){
+                    view.noResults();
+                    view.hideProgressBar();
+                    return;
+                }
                 else if(response.body().getStatus().equalsIgnoreCase("OK")) {
                     placeDistanceList = new ArrayList<>();
                     DecimalFormat df = new DecimalFormat("#.#");
