@@ -1,19 +1,31 @@
 <resources>
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDwKt4bVuNV8ILO4oQDQ9HK4hPFMHHRUQg</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyClfUpKYP7pGO514jV90-fYx_lAnaDq_hY</string>
     <string name="app_name">Gold Farm</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="rest">Restaurant</string>
+    <string name="rest">Restaurants</string>
+    <string name="places">Get Places near me</string>
     <string name="hotel">Hotels</string>
-    <string name="hospital">Hospital</string>
+    <string name="hospital">Hospitals</string>
     <string name="find_rest">Restaurants near me</string>
     <string name="find_hotel">Hotels near me</string>
     <string name="find_hospital">Hospitals near me</string>
-    <string name="near_by">near by</string>
+    <string name="near_by">Near by</string>
     <string name="distance">Distance</string>
     <string name="name">Name</string>
     <string name="rest_near">Restaurants near me</string>
     <string name="hotel_near">Hotels near me</string>
     <string name="hospital_near">hospitals near me</string>
+    <string name="cur_loc">Location</string>
+    <string name="getting_adds">Getting address</string>
+    <string name="no_rest">We are trying to fetch Restaurants for you</string>
+    <string name="no_hosp">We are trying to fetch Hospitals for you</string>
+    <string name="no_hotels">We are trying to fetch Hotels for you</string>
+    <string name="getting_location">We are getting your location</string>
+    <string name="no_hotels_found">No Hotels Found!!!</string>
+    <string name="no_hospitals_found">No Hospitals found!!!</string>
+    <string name="loc_enabled">Location not enabled</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_rest_found">No Restaurants found</string>
 </resources>

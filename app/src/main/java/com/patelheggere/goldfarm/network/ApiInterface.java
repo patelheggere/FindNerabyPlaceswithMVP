@@ -17,6 +17,13 @@ public interface ApiInterface {
     //ind AIzaSyDexSpfSK4WI1XnxQCuusnateV57knMJww
     @GET("api/place/nearbysearch/json?sensor=true&rankby=distance&key=AIzaSyDexSpfSK4WI1XnxQCuusnateV57knMJww")
     Call<Place> getNearbyPlaces(@Query("types") String type, @Query("location") String location);
+    //Call<Place> getNearbyPlaces(@Query("location") String location);
+
+    @GET("api/place/nearbysearch/json?sensor=true&rankby=distance&key=AIzaSyDexSpfSK4WI1XnxQCuusnateV57knMJww")
+    Call<Place> getNearbyPlacesWithToken(@Query("location") String location, @Query("pagetoken") String token);
+
+    // with type
+    //Call<Place> getNearbyPlaces(@Query("types") String type, @Query("location") String location);
 
    // Call<Place> getNearbyPlaces(@Query("types") String type, @Query("location") String location, @Query("radius") int radius);
 

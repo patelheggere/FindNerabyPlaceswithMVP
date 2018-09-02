@@ -1,4 +1,4 @@
-package com.patelheggere.goldfarm.view;
+package com.patelheggere.goldfarm.view.activities;
 
 import android.Manifest;
 import android.content.Intent;
@@ -73,6 +73,7 @@ public class MainActivity extends BaseActivity implements
                         fragmentTransaction.commitNowAllowingStateLoss();
 
                         return true;
+                        /*
                     case R.id.navigation_hotel:
                         if (curFrag != null) {
                             fragmentTransaction.detach(curFrag);
@@ -87,7 +88,7 @@ public class MainActivity extends BaseActivity implements
                         fragmentTransaction.setPrimaryNavigationFragment(fragment);
                         fragmentTransaction.setReorderingAllowed(true);
                         fragmentTransaction.commitNowAllowingStateLoss();
-                        // mTextMessage.setText(R.string.title_dashboard);*/
+                        // mTextMessage.setText(R.string.title_dashboard);
                         return true;
                     case R.id.navigation_hospital:
                         if (curFrag != null) {
@@ -105,6 +106,7 @@ public class MainActivity extends BaseActivity implements
                         fragmentTransaction.commitNowAllowingStateLoss();
                         //mTextMessage.setText(R.string.title_notifications);
                         return true;
+                        */
                 }
                 return false;
             }

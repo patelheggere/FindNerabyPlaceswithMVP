@@ -3,17 +3,7 @@
 
     <item
         android:id="@+id/navigation_rest"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/rest" />
-
-    <item
-        android:id="@+id/navigation_hotel"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/hotel" />
-
-    <item
-        android:id="@+id/navigation_hospital"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/hospital" />
+        android:icon="@drawable/ic_placeholder"
+        android:title="@string/places" />
 
 </menu>

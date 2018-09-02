@@ -10,7 +10,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -233,12 +232,12 @@ public class RestFragment extends BaseFragment implements OnMapReadyCallback,
     }
 
     @Override
-    public void noResults() {
+    public void noResults(String type) {
         Toast.makeText(mActivity, "No Restaurants found ", Toast.LENGTH_LONG).show();
     }
 
     @Override
-    public void queryLimit() {
+    public void queryLimit(String type) {
         Toast.makeText(mActivity, "Query Limit for this API Key finished for the day or try after some time", Toast.LENGTH_LONG).show();
     }
 

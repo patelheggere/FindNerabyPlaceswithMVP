@@ -5,13 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/root_view"
-    tools:context=".view.SecondMainActivity">
+    tools:context=".view.activities.SecondMainActivity">
+    <LinearLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:id="@+id/tv_getting_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.6"
+                android:text="@string/getting_location"/>
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.SecondMainActivity" />
+        tools:context=".view.activities.SecondMainActivity" />
     <ProgressBar
         android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
@@ -21,16 +51,68 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+        android:id="@+id/iv_curr"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/ic_placeholder"
+        android:elevation="2dp"
+        app:layout_constraintVertical_bias=".47"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/search_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+            android:foregroundGravity="center"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="3dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/ic_maps_and_flags"/>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ti_in_lyt"
+            style="@style/Widget.Design.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_place_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="@string/cur_loc"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:focusable="false"
+                android:layout_margin="8dp"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_rest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:padding="5dp"
+        android:visibility="gone"
         android:background="@drawable/btn_bg"
         android:text="@string/find_rest"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,9 +124,20 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="0dp"
         android:layout_marginStart="0dp"
+        android:visibility="gone"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/navigation" />
+    <Button
+        android:id="@+id/btn_near"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/places"
+        android:theme="@style/PrimaryButton"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 </android.support.constraint.ConstraintLayout>

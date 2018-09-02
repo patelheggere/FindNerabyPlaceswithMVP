@@ -6,8 +6,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.patelheggere.goldfarm.R;
 import com.patelheggere.goldfarm.model.PlaceDistanceModel;
 
@@ -45,6 +47,8 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
                 holder.name.setText(place.getName());
             if (place.getDistance() != null)
                holder.distance.setText(place.getDistance());
+            if(place.getIcon()!=null)
+                Glide.with(mContext).load(place.getIcon()).into(holder.imageView);
         }
     }
 
@@ -64,11 +68,13 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.View
 
         TextView name;
         TextView distance;
+        ImageView imageView;
 
         public ViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.tv_name);
             distance = itemView.findViewById(R.id.tv_distance);
+            imageView = itemView.findViewById(R.id.iv_icon);
         }
     }
 

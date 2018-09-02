@@ -2,7 +2,6 @@ package com.patelheggere.goldfarm.view.hotel;
 
 import android.Manifest;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -11,7 +10,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -233,12 +231,12 @@ public void hideProgressBar() {
         }
 
 @Override
-public void noResults() {
+public void noResults(String type) {
         Toast.makeText(mActivity, "Not found any Hotel near by you ", Toast.LENGTH_LONG).show();
         }
 
 @Override
-public void queryLimit() {
+public void queryLimit(String type) {
         Toast.makeText(mActivity, "Query Limit for this API Key finished for the day or try after some time", Toast.LENGTH_LONG).show();
         }
 

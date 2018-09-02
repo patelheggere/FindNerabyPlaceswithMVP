@@ -9,6 +9,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled = true
     }
     buildTypes {
         release {
@@ -23,6 +25,9 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
     implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:support-vector-drawable:$rootProject.supportLibraryVersion" // VectorDrawableCompat
+    implementation "com.android.support:animated-vector-drawable:$rootProject.supportLibraryVersion" // AnimatedVectorDrawableCompat
+    //implementation 'com.google.android.material:material:1.0.0-beta01'
     implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
     implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
     implementation "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
@@ -66,6 +71,7 @@ dependencies {
     //google map
     implementation "com.google.android.gms:play-services-location:$rootProject.playServiceVersion"
     implementation "com.google.android.gms:play-services-maps:$rootProject.playServiceVersion"
+    implementation "com.google.android.gms:play-services-places:$rootProject.playServiceVersion"
 
     //ntework library
     implementation("com.squareup.retrofit2:retrofit:${rootProject.ext.retrofitLibVersion}") {
@@ -76,9 +82,13 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofitLibVersion}"
     implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.okhttpLibVersion}"
     implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.okhttpLibVersion}"
-    implementation 'com.google.maps.android:android-maps-utils:0.4'
-    implementation 'com.google.dagger:dagger:2.13'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.google.dagger:dagger:2.16'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.13'
     implementation "com.android.support:support-dynamic-animation:27.1.1"
+
+    implementation "com.github.bumptech.glide:glide:${rootProject.ext.glideLibVersion}"
+    // Glide v4 uses this new annotation processor -- see https://bumptech.github.io/glide/doc/generatedapi.html
+    annotationProcessor "com.github.bumptech.glide:compiler:${rootProject.ext.glideLibVersion}"
 }
 apply plugin: 'com.google.gms.google-services'
